@@ -11,13 +11,15 @@ const Exercise = () => {
 
     const [audioIsPlaying, setAudioIsPlaying] = useState(false);
     const [audioHasEnded, setAudioHasEnded] = useState(false);
+    const [userWantCommands, setUserWantCommands] = useState(true);
     const [button, setButton] = useState({
         label: "Done",
         style: "btn-primay-disabled anchored-bottom"
     });
 
     const handlePlaying = (e) => {
-        setAudioIsPlaying(true);     
+        setAudioIsPlaying(true);
+        setUserWantCommands(false);
         console.log(e);
     }
     const handlePause = (e) => {
@@ -26,7 +28,18 @@ const Exercise = () => {
     }
     const handleEnd = (e) => {
         setAudioHasEnded(true);
+        setUserWantCommands(true);
         console.log(e);
+    }
+
+    const handleClick = () => {
+        if (audioIsPlaying) {
+            if ( !userWantCommands ) {
+                setUserWantCommands(true);
+            } else {
+                setUserWantCommands(false);
+            }
+        }        
     }
 
     useEffect(()=>{
@@ -47,9 +60,7 @@ const Exercise = () => {
                 }
             )        
         }
-    },[audioHasEnded]);
-
-    
+    },[audioHasEnded]);    
     
     const buttonAway = {
         label: "Done",
@@ -60,20 +71,18 @@ const Exercise = () => {
     }
 
     return (
-        <div className="frame bg-seaside">
+        <div className="frame bg-seaside" onClick={handleClick}>
             <NavbarIcons style={audioIsPlaying ? topbarAway.style : "nav-main nav-transparent"} onClickFunc={() => navigate(-1)} />
             <div className="container nav-padding">
-                <h1 className={audioIsPlaying ? `tool-title text-white opacity-null` : `tool-title text-white opacity-full`}>Muscle Relaxation</h1>
-                <figure>
-                    <audio
-                        controls
-                        src={Audio}
-                        onPlay={handlePlaying}
-                        onPause={handlePause}
-                        onEnded={handleEnd}
-                    >
-                    </audio>
-                </figure>
+                <h1 className={audioIsPlaying ? `tool-title text-white opacity-null` : `tool-title text-white opacity-full`}>Muscle Relaxation</h1>   
+                <audio className={userWantCommands ? "audio" : "commands-down"}
+                    controls
+                    src={Audio}
+                    onPlay={handlePlaying}
+                    onPause={handlePause}
+                    onEnded={handleEnd}
+                >
+                </audio>
                 <Button label={button.label} style={audioIsPlaying ? buttonAway.style : button.style} disabled={button.disabled} onClickFunc={() => navigate("/congrats")} />
             </div>            
         </div>

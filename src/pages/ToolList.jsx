@@ -60,9 +60,12 @@ const ToolList = () => {
                 <div>
                     {tools.map((tool) => {
                         return (
-                            <Link to={tool.slug}>
+                            <Link
+                                to={tool.slug}
+                                key={tool.id}
+                            >
                                 <ToolListItem
-                                    key={tool.id}
+                                    
                                     tool={tool.tool}
                                     style={tool.style}
                                 />

@@ -18,11 +18,50 @@ a {
 :root {
   --container: 80%;
   --navbar-height: 14vh;
+  --frame: 375px
+}
+
+@media screen and (min-width: 0px) {
+  :root {
+    --btn-padding: 5%;
+    --bottom-position-btn: 4%;
+  }
+}
+@media screen and (min-width: 576px) {
+  :root {
+    --btn-padding: 3.2%;
+    --bottom-position-btn: 4%;
+  }
+}
+@media screen and (min-width: 768px) {
+  :root {
+    --btn-padding: 2.4%;
+    --bottom-position-btn: 4%;
+  }
+}
+@media screen and (min-width: 992px) {
+  :root {
+    --btn-padding: 2%;
+    --bottom-position-btn: 4%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  :root {
+    --btn-padding: 1.6%;
+    --bottom-position-btn: 4%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  :root {
+    --btn-padding: 1.4%;
+    --bottom-position-btn: 4%;
+  }
 }
 
 
 .frame {
-  width: 375px;
+  position: relative;
+  width: var(--frame);
   height: 667px;
   overflow-x: hidden;
   overflow-y: auto;
@@ -38,7 +77,7 @@ a {
   transition: all 400ms;
   position: fixed;
   top: 0;
-  width: 100%;
+  width: inherit;
   z-index: 999;
   background-color: #FFFFFF;
 }
@@ -74,8 +113,8 @@ a {
 .btn-primay-enabled {
   transition: all 400ms;
   border: none;
-  width: 100%;
-  padding: 5%;
+  width: calc(var(--frame) - var(--frame)*0.2);
+  padding: var(--btn-padding);
   border-radius: 4px;
   background-color: #5302FF;
   color:#FFFFFF;
@@ -85,7 +124,7 @@ a {
 .btn-primay-enabled-white {
   transition: all 400ms;
   border: none;
-  width: 100%;
+  width: var(--container);
   padding: 5%;
   border-radius: 4px;
   background-color: #FFFFFF;
@@ -96,7 +135,7 @@ a {
 .btn-primay-disabled {
   transition: all 400ms;
   border: none;
-  width: 100%;
+  width: var(--container);
   padding: 5%;
   border-radius: 4px;
   background-color: #4215A3;
@@ -106,8 +145,7 @@ a {
 }
 .anchored-bottom {
   position: fixed;
-  width: var(--container);
-  bottom: 4%;
+  bottom: var(--bottom-position-btn);
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
@@ -175,13 +213,30 @@ h4 {
 }
 
 audio {
+  transition: all 400ms;
   position: absolute;
   bottom: 14%;
 }
 
+.audio {
+  transition: all 400ms;
+  position: absolute;
+  bottom: 14%;
+}
+
+.commands-up {
+  transition: all 400ms;
+  bottom: 4%;
+}
+
+.commands-down {
+  transition: all 400ms;
+  bottom: -10%;
+}
+
 .btn-away {
   transition: all 400ms;
-  bottom: -20%;
+  bottom: -30%;
 }
 .topbar-away {
   transition: all 400ms;

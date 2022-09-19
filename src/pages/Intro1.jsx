@@ -49,8 +49,9 @@ const Intro1 = () => {
                     })}
                 </div>
                 <p className="intro-text">This exercise helps you relax your muscles through breathing.</p>
-                <Button label={button.label} style={button.style} onClickFunc={() => navigate("/intro-2")} />
-            </div>            
+                
+            </div>
+            <Button label={button.label} style={button.style} onClickFunc={() => navigate("/intro-2")} />            
         </div>
     )
 }
