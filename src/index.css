@@ -15,6 +15,17 @@ a {
   color: #000000;
 }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 :root {
   --container: 80%;
   --navbar-height: 14vh;
@@ -26,49 +37,55 @@ a {
     --btn-padding: 5%;
     --bottom-position-btn: 4%;
     --bottom-upper-position-btn: 14%;
+    --frame-width: 100vw;
   }
 }
 @media screen and (min-width: 576px) {
   :root {
-    --btn-padding: 3.2%;
+    --btn-padding: 5%;
     --bottom-position-btn: 4%;
     --bottom-upper-position-btn: 14%;
+    --frame-width: 55vw;
   }
 }
 @media screen and (min-width: 768px) {
   :root {
-    --btn-padding: 2.4%;
+    --btn-padding: 5%;
     --bottom-position-btn: 4%;
     --bottom-upper-position-btn: 14%;
+    --frame-width: 40vw;
   }
 }
 @media screen and (min-width: 992px) {
   :root {
-    --btn-padding: 2%;
+    --btn-padding: 5%;
     --bottom-position-btn: 4%;
     --bottom-upper-position-btn: 14%;
+    --frame-width: 35vw;
   }
 }
 @media screen and (min-width: 1280px) {
   :root {
-    --btn-padding: 1.6%;
+    --btn-padding: 5%;
     --bottom-position-btn: 4%;
     --bottom-upper-position-btn: 14%;
+    --frame-width: 30vw;
   }
 }
 @media screen and (min-width: 1440px) {
   :root {
-    --btn-padding: 1.4%;
+    --btn-padding: 5%;
     --bottom-position-btn: 4%;
     --bottom-upper-position-btn: 14%;
+    --frame-width: 25vw;
   }
 }
 
 
 .frame {
   position: relative;
-  width: var(--frame);
-  height: 667px;
+  width: var(--frame-width);
+  height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
   background-color: #FFFFFF;
@@ -119,7 +136,7 @@ a {
 .btn-primay-enabled {
   transition: all 400ms;
   border: none;
-  width: calc(var(--frame) - var(--frame)*0.2);
+  width: var(--container);
   padding: var(--btn-padding);
   border-radius: 4px;
   background-color: #5302FF;
@@ -152,7 +169,7 @@ a {
 .btn-secondary-enabled {
   transition: all 400ms;
   border: none;
-  width: calc(var(--frame) - var(--frame)*0.2);
+  width: var(--container);
   padding: var(--btn-padding);
   border-radius: 4px;
   background-color: #ececec;
@@ -168,14 +185,14 @@ a {
 .anchored-bottom-upper {
   position: absolute;
   bottom: var(--bottom-upper-position-btn);
-  left: calc((100vw - var(--container))/2);
+  left: calc((var(--frame-width) - var(--container))/2);
   z-index: 10;
 }
 .sticky-bottom {
   position: sticky;
   bottom: var(--bottom-position-btn);
   z-index: 10;
-  left: calc((100vw - var(--container))/2);
+  left: calc((var(--frame-width) - var(--container))/2);
 }
 
 .intro-text {
@@ -312,7 +329,7 @@ h4 {
 .modal-full {
   transition: all 400ms;
   position: relative;
-  width: 100vw;
+  width: var(--frame-width);
   height: 90vh;
   background-color: #FFFFFF;
   z-index: 10000;
@@ -322,7 +339,7 @@ h4 {
 .modal-down {
   transition: all 400ms;
   position: absolute;
-  width: 100vw;
+  width: var(--frame-width);
   height: 90vh;
   background-color: #FFFFFF;
   bottom: -100%;
@@ -333,7 +350,7 @@ h4 {
 .modal-up {
   transition: all 400ms;
   position: absolute;
-  width: 100vw;
+  width: var(--frame-width);
   height: 90vh;
   background-color: #FFFFFF;
   bottom: 0%;
@@ -350,7 +367,7 @@ h4 {
 .modal-bottom-nav {
   position: absolute;
   bottom: 4%;
-  width: var(--container);
+  width: var(--frame-width);
 }
 
 .overflow-hidden {
