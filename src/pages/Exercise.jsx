@@ -25,7 +25,7 @@ const Exercise = () => {
 
     const handlePlaying = (e) => {
         setAudioIsPlaying(true);
-        setUserWantCommands(false);
+        setTimeout(()=>{setUserWantCommands(false)},120);
         //console.log(e);
     }
     const handlePause = (e) => {
@@ -85,8 +85,8 @@ const Exercise = () => {
                 }
             )        
         }
-    },[audioHasEnded]);    
-    
+    },[audioHasEnded]);
+
     const buttonAway = {
         label: "Done",
         style: "btn-primay-enabled anchored-bottom btn-away"

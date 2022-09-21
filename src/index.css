@@ -239,14 +239,6 @@ h4 {
   flex-direction: row-reverse;
 }
 
-audio {
-  transition: all 400ms;
-  position: absolute;
-  bottom: 14%;
-  width: var(--container);
-  height: 64px;
-}
-
 .audio {
   transition: all 400ms;
   position: absolute;
@@ -262,7 +254,10 @@ audio {
 
 .commands-down {
   transition: all 400ms;
+  position: absolute;
   bottom: -10%;
+  width: var(--container);
+  height: 64px;
 }
 
 .btn-away {
