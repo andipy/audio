@@ -25,36 +25,42 @@ a {
   :root {
     --btn-padding: 5%;
     --bottom-position-btn: 4%;
+    --bottom-upper-position-btn: 14%;
   }
 }
 @media screen and (min-width: 576px) {
   :root {
     --btn-padding: 3.2%;
     --bottom-position-btn: 4%;
+    --bottom-upper-position-btn: 14%;
   }
 }
 @media screen and (min-width: 768px) {
   :root {
     --btn-padding: 2.4%;
     --bottom-position-btn: 4%;
+    --bottom-upper-position-btn: 14%;
   }
 }
 @media screen and (min-width: 992px) {
   :root {
     --btn-padding: 2%;
     --bottom-position-btn: 4%;
+    --bottom-upper-position-btn: 14%;
   }
 }
 @media screen and (min-width: 1280px) {
   :root {
     --btn-padding: 1.6%;
     --bottom-position-btn: 4%;
+    --bottom-upper-position-btn: 14%;
   }
 }
 @media screen and (min-width: 1440px) {
   :root {
     --btn-padding: 1.4%;
     --bottom-position-btn: 4%;
+    --bottom-upper-position-btn: 14%;
   }
 }
 
@@ -143,12 +149,33 @@ a {
   font-size: 1.2rem;
   font-weight: 600;
 }
+.btn-secondary-enabled {
+  transition: all 400ms;
+  border: none;
+  width: calc(var(--frame) - var(--frame)*0.2);
+  padding: var(--btn-padding);
+  border-radius: 4px;
+  background-color: #ececec;
+  color:#5302FF;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
 .anchored-bottom {
-  position: fixed;
+  position: absolute;
   bottom: var(--bottom-position-btn);
-  left: 50%;
-  transform: translateX(-50%);
   z-index: 10;
+}
+.anchored-bottom-upper {
+  position: absolute;
+  bottom: var(--bottom-upper-position-btn);
+  left: calc((100vw - var(--container))/2);
+  z-index: 10;
+}
+.sticky-bottom {
+  position: sticky;
+  bottom: var(--bottom-position-btn);
+  z-index: 10;
+  left: calc((100vw - var(--container))/2);
 }
 
 .intro-text {
@@ -216,12 +243,16 @@ audio {
   transition: all 400ms;
   position: absolute;
   bottom: 14%;
+  width: var(--container);
+  height: 64px;
 }
 
 .audio {
   transition: all 400ms;
   position: absolute;
   bottom: 14%;
+  width: var(--container);
+  height: 64px;
 }
 
 .commands-up {
@@ -281,4 +312,52 @@ audio {
   background-color: #FFFFFF;
   margin-right: 2%;
   border-radius: 16px;
+}
+
+.modal-full {
+  transition: all 400ms;
+  position: relative;
+  width: 100vw;
+  height: 90vh;
+  background-color: #FFFFFF;
+  z-index: 10000;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0px -10px 32px #888888;
+}
+.modal-down {
+  transition: all 400ms;
+  position: absolute;
+  width: 100vw;
+  height: 90vh;
+  background-color: #FFFFFF;
+  bottom: -100%;
+  z-index: 10000;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0px -10px 32px #888888;
+}
+.modal-up {
+  transition: all 400ms;
+  position: absolute;
+  width: 100vw;
+  height: 90vh;
+  background-color: #FFFFFF;
+  bottom: 0%;
+  z-index: 1000;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0px -10px 32px #888888;
+}
+.modal-nav {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 8% 0;
+}
+.modal-bottom-nav {
+  position: absolute;
+  bottom: 4%;
+  width: var(--container);
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }

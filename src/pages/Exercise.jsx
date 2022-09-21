@@ -4,10 +4,16 @@ import { useNavigate } from "react-router-dom";
 import NavbarIcons from "../components/NavbarIcons";
 import Button from "../components/Button";
 import Audio from "../assets/audios/Beach.mp3";
+import ModalFull from "../components/ModalFull";
 
 const Exercise = () => {
 
     let navigate = useNavigate();
+
+    const [modalOpen, setModalOpen] = useState(false);
+    const [modalState, setModalState] = useState({
+        style: "modal-full modal-down"
+    });
 
     const [audioIsPlaying, setAudioIsPlaying] = useState(false);
     const [audioHasEnded, setAudioHasEnded] = useState(false);
@@ -20,16 +26,16 @@ const Exercise = () => {
     const handlePlaying = (e) => {
         setAudioIsPlaying(true);
         setUserWantCommands(false);
-        console.log(e);
+        //console.log(e);
     }
     const handlePause = (e) => {
         setAudioIsPlaying(false);       
-        console.log(e);
+        //console.log(e);
     }
     const handleEnd = (e) => {
         setAudioHasEnded(true);
         setUserWantCommands(true);
-        console.log(e);
+        //console.log(e);
     }
 
     const handleClick = () => {
@@ -41,6 +47,25 @@ const Exercise = () => {
             }
         }        
     }
+
+    const openModal = () => {
+        setModalOpen(true);
+    }
+    const closeModal = () => {
+        setModalOpen(false);
+    }
+
+    useEffect(()=>{
+        if (modalOpen) {
+            setModalState({
+                style: "modal-full modal-up"
+            })
+        } else {
+            setModalState({
+                style: "modal-full modal-down"
+            })
+        }
+    },[modalOpen]);
 
     useEffect(()=>{
         if ( audioHasEnded == true ) {
@@ -71,8 +96,8 @@ const Exercise = () => {
     }
 
     return (
-        <div className="frame bg-seaside" onClick={handleClick}>
-            <NavbarIcons style={audioIsPlaying ? topbarAway.style : "nav-main nav-transparent"} onClickFunc={() => navigate(-1)} />
+        <div className="frame bg-seaside overflow-hidden" onClick={handleClick}>
+            <NavbarIcons style={audioIsPlaying ? topbarAway.style : "nav-main nav-transparent"} onClickFunc={() => navigate(-1)} onOpenModal={openModal} />
             <div className="container nav-padding">
                 <h1 className={audioIsPlaying ? `tool-title text-white opacity-null` : `tool-title text-white opacity-full`}>Muscle Relaxation</h1>   
                 <audio className={userWantCommands ? "audio" : "commands-down"}
@@ -84,7 +109,9 @@ const Exercise = () => {
                 >
                 </audio>
                 <Button label={button.label} style={audioIsPlaying ? buttonAway.style : button.style} disabled={button.disabled} onClickFunc={() => navigate("/congrats")} />
-            </div>            
+            </div>
+
+            <ModalFull style={modalState.style} onCloseFunc={closeModal} />
         </div>
     )
 }

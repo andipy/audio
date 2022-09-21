@@ -15,7 +15,7 @@ const Intro1 = () => {
 
     const button = {
         label: "Next",
-        style: "btn-primay-enabled anchored-bottom"
+        style: "btn-primay-enabled sticky-bottom"
     }
 
     const tags = [
@@ -23,12 +23,11 @@ const Intro1 = () => {
             id: 1,
             icon: Tool,
             label: "audio"
-        },
-        {
+        },{
             id: 2,
             icon: Timer,
             label: "6 min"
-        },
+        }
     ]
 
     return (

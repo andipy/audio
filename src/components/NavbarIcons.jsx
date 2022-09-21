@@ -14,7 +14,7 @@ const NavbarIcons = (props) => {
                     <img src={BackArrowWhite} onClick={props.onClickFunc} />
                     <div className="navbar-icons-right">
                         <img className="navbar-icon-right" src={FavouriteDeselectedWhite} />
-                        <img className="navbar-icon-right" src={Info} />
+                        <img className="navbar-icon-right" src={Info} onClick={props.onOpenModal} />
                         <img className="navbar-icon-right" src={ClosedCaption} />
                     </div>
                 </div>                
