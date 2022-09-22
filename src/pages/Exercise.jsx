@@ -29,7 +29,8 @@ const Exercise = () => {
         //console.log(e);
     }
     const handlePause = (e) => {
-        setAudioIsPlaying(false);       
+        setAudioIsPlaying(false);
+        setUserWantCommands(true);
         //console.log(e);
     }
     const handleEnd = (e) => {
