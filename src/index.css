@@ -27,9 +27,13 @@ a {
 }
 
 :root {
-  --container: 80%;
+  --container: 85%;
   --navbar-height: 14vh;
   --frame: 375px
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 @media screen and (min-width: 0px) {
@@ -38,6 +42,11 @@ a {
     --bottom-position-btn: 4%;
     --bottom-upper-position-btn: 14%;
     --frame-width: 100vw;
+    --frame-height: 100vh;
+    --modal-height: 90vh;
+  }
+  .padding-bottom {
+    padding-bottom: 8vh;
   }
 }
 @media screen and (min-width: 576px) {
@@ -45,7 +54,9 @@ a {
     --btn-padding: 5%;
     --bottom-position-btn: 4%;
     --bottom-upper-position-btn: 14%;
-    --frame-width: 55vw;
+    --frame-width: 375px;
+    --frame-height: 667px;
+    --modal-height: 620px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -53,7 +64,8 @@ a {
     --btn-padding: 5%;
     --bottom-position-btn: 4%;
     --bottom-upper-position-btn: 14%;
-    --frame-width: 40vw;
+    --frame-width: 375px;
+    --frame-height: 667px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -61,7 +73,8 @@ a {
     --btn-padding: 5%;
     --bottom-position-btn: 4%;
     --bottom-upper-position-btn: 14%;
-    --frame-width: 35vw;
+    --frame-width: 375px;
+    --frame-height: 667px;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -69,7 +82,8 @@ a {
     --btn-padding: 5%;
     --bottom-position-btn: 4%;
     --bottom-upper-position-btn: 14%;
-    --frame-width: 30vw;
+    --frame-width: 375px;
+    --frame-height: 667px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -77,7 +91,8 @@ a {
     --btn-padding: 5%;
     --bottom-position-btn: 4%;
     --bottom-upper-position-btn: 14%;
-    --frame-width: 25vw;
+    --frame-width: 375px;
+    --frame-height: 667px;
   }
 }
 
@@ -85,7 +100,7 @@ a {
 .frame {
   position: relative;
   width: var(--frame-width);
-  height: 100vh;
+  height: var(--frame-height);
   overflow-x: hidden;
   overflow-y: auto;
   background-color: #FFFFFF;
@@ -177,6 +192,14 @@ a {
   font-size: 1.2rem;
   font-weight: 600;
 }
+.fixed-bottom {
+  position: fixed;
+  width: 100%;
+  left: calc((var(--frame-width) - var(--container))/2);
+  bottom: var(--bottom-position-btn);
+  z-index: 10;  
+}
+/*
 .anchored-bottom {
   position: absolute;
   bottom: var(--bottom-position-btn);
@@ -194,6 +217,7 @@ a {
   z-index: 10;
   left: calc((var(--frame-width) - var(--container))/2);
 }
+*/
 
 .intro-text {
   font-size: 2.7rem;
@@ -223,10 +247,6 @@ h4 {
 .tool-title {
   font-size: 1.7rem;
   font-weight: 800;
-}
-
-.padding-bottom {
-  padding-bottom: 15vh;
 }
 
 .tag {
@@ -342,7 +362,7 @@ h4 {
   width: var(--frame-width);
   height: 90vh;
   background-color: #FFFFFF;
-  bottom: -100%;
+  bottom: -120%;
   z-index: 10000;
   border-radius: 10px 10px 0 0;
   box-shadow: 0px -10px 32px #888888;
@@ -351,7 +371,7 @@ h4 {
   transition: all 400ms;
   position: absolute;
   width: var(--frame-width);
-  height: 90vh;
+  height: var(--modal-height);
   background-color: #FFFFFF;
   bottom: 0%;
   z-index: 1000;

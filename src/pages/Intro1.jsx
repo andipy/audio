@@ -50,7 +50,10 @@ const Intro1 = () => {
                 <p className="intro-text">This exercise helps you relax your muscles through breathing.</p>
                 
             </div>
-            <Button label={button.label} style={button.style} onClickFunc={() => navigate("/intro-2")} />            
+            
+            <div className="fixed-bottom">            
+                <Button label={button.label} style={button.style} onClickFunc={() => navigate("/intro-2")} />
+            </div>
         </div>
     )
 }
