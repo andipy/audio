@@ -67,6 +67,14 @@ button:hover {
     bottom: var(--bottom-position-btn);
     z-index: 10;
   }
+
+  .full-height-content-centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
 }
 @media screen and (min-width: 576px) {
   :root {
@@ -106,6 +114,14 @@ button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .full-height-content-centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: var(--frame-height);
   }
 }
 @media screen and (min-width: 768px) {
@@ -277,13 +293,6 @@ h4 {
   font-weight: 500;
   line-height: 120%;
   text-align: center;
-}
-.full-height-content-centered {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
 }
 
 .tool-title {

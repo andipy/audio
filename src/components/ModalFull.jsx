@@ -86,7 +86,7 @@ const ModalFull = (props) => {
                 
                 <div className="modal-bottom-nav">
                     {currentModal.modal_buttons.map((button) => {
-                        return (                                
+                        return (
                             <Button
                                 label={button.label}
                                 style={button.style}
