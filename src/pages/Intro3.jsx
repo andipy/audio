@@ -18,11 +18,11 @@ const Intro3 = () => {
 
     const button = {
         label: "Get Started",
-        style: "btn-primay-enabled anchored-bottom"
+        style: "btn-primay-enabled"
     }
     const buttonSecondary = {
         label: "Why Do This?",
-        style: "btn-secondary-enabled anchored-bottom-upper"
+        style: "btn-secondary-enabled"
     }
 
     const openModal = () => {
@@ -52,8 +52,11 @@ const Intro3 = () => {
                     <img src={Img} className="icon-img" />
                 </div>                
                 <p className="intro-text">It’s gonna take around 6 minutes to complete.</p>
-                <Button label={buttonSecondary.label} style={buttonSecondary.style} onClickFunc={openModal} />
-                <Button label={button.label} style={button.style} onClickFunc={() => navigate("/exercise")} />
+
+                <div className="fixed-bottom-double">
+                    <Button label={buttonSecondary.label} style={buttonSecondary.style} onClickFunc={openModal} />
+                    <Button label={button.label} style={button.style} onClickFunc={() => navigate("/exercise")} />
+                </div>
             </div>
 
             <ModalFull style={modalState.style} onCloseFunc={closeModal} modalState={modalOpen} />

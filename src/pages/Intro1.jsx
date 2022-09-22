@@ -15,7 +15,7 @@ const Intro1 = () => {
 
     const button = {
         label: "Next",
-        style: "btn-primay-enabled sticky-bottom"
+        style: "btn-primay-enabled"
     }
 
     const tags = [
@@ -50,8 +50,7 @@ const Intro1 = () => {
                 <p className="intro-text">This exercise helps you relax your muscles through breathing.</p>
                 
             </div>
-            
-            <div className="fixed-bottom">            
+            <div className="fixed-bottom">
                 <Button label={button.label} style={button.style} onClickFunc={() => navigate("/intro-2")} />
             </div>
         </div>

@@ -12,7 +12,7 @@ const Intro2 = () => {
 
     const button = {
         label: "Next",
-        style: "btn-primay-enabled anchored-bottom"
+        style: "btn-primay-enabled"
     }
 
     return (
@@ -23,7 +23,9 @@ const Intro2 = () => {
                     <img src={Img} className="icon-img" />
                 </div>                
                 <p className="intro-text">You will have to listen to a guided audio exercise, and execute it along side.</p>
-                <Button label={button.label} style={button.style} onClickFunc={() => navigate("/intro-3")} />
+                <div className="fixed-bottom">
+                    <Button label={button.label} style={button.style} onClickFunc={() => navigate("/intro-3")} />
+                </div>
             </div>
             
         </div>
