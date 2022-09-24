@@ -14,7 +14,7 @@ function App() {
     <div className="frame">      
       <BrowserRouter>
         <Routes>
-          <Route path="*" element={<Navigate to="/intro-1" replace />} />
+          <Route path="*" element={<Navigate to="/tool-list" replace />} />
           <Route path="/tool-list" element={<ToolList />} />
           <Route path="/intro-1" element={<Intro1 />} />
           <Route path="/intro-2" element={<Intro2 />} />

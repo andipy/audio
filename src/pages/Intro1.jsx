@@ -14,7 +14,7 @@ const Intro1 = () => {
     let navigate = useNavigate();
 
     const button = {
-        label: "Next",
+        label: "Start",
         style: "btn-primay-enabled"
     }
 
@@ -47,11 +47,11 @@ const Intro1 = () => {
                         )
                     })}
                 </div>
-                <p className="intro-text">This exercise helps you relax your muscles through breathing.</p>
+                <p className="intro-text">This audio exercise helps you focus on relaxing your muscles. You can practice muscle relaxation whenever you want to release tension or tightness in your muscles. </p>
                 
             </div>
             <div className="fixed-bottom">
-                <Button label={button.label} style={button.style} onClickFunc={() => navigate("/intro-2")} />
+                <Button label={button.label} style={button.style} onClickFunc={() => navigate("/exercise")} />
             </div>
         </div>
     )
