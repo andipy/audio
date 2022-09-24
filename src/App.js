@@ -11,7 +11,7 @@ import ToolList from "./pages/ToolList";
 function App() {
 
   return (
-    <div className="frame">      
+    <div className="frame no-scrollbar">      
       <BrowserRouter>
         <Routes>
           <Route path="*" element={<Navigate to="/tool-list" replace />} />
