@@ -53,7 +53,7 @@ const ToolList = () => {
     ]
 
     return (
-        <div className="frame">
+        <div className="frame no-scrollbar">
             <Navbar onClickFunc={() => navigate(-1)} />
             <div className="container nav-padding padding-bottom">
                 <h1 className="tool-title">Tools</h1>
