@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/audio/static/css/main.fd587cc1.css",
-    "main.js": "/audio/static/js/main.1533fd22.js",
+    "main.js": "/audio/static/js/main.7474794b.js",
     "static/js/787.aa569ced.chunk.js": "/audio/static/js/787.aa569ced.chunk.js",
     "static/media/Beach.mp3": "/audio/static/media/Beach.b5c44d5248b881ad4ad4.mp3",
     "static/media/seaside.png": "/audio/static/media/seaside.c2d02f5360bebd924ba1.png",
@@ -20,11 +20,11 @@
     "static/media/arrow-go.svg": "/audio/static/media/arrow-go.84558cea1ade8191aa6cecd7b71a242f.svg",
     "static/media/back-arrow.svg": "/audio/static/media/back-arrow.d6bea82400d832eca163370522669f6e.svg",
     "main.fd587cc1.css.map": "/audio/static/css/main.fd587cc1.css.map",
-    "main.1533fd22.js.map": "/audio/static/js/main.1533fd22.js.map",
+    "main.7474794b.js.map": "/audio/static/js/main.7474794b.js.map",
     "787.aa569ced.chunk.js.map": "/audio/static/js/787.aa569ced.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fd587cc1.css",
-    "static/js/main.1533fd22.js"
+    "static/js/main.7474794b.js"
   ]
 }
