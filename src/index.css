@@ -278,9 +278,10 @@ button:hover {
 
 
 .intro-text {
-  font-size: 2.7rem;
+  font-size: 1.8rem;
   font-weight: 600;
   line-height: 100%;
+  margin-top: 4%;
 }
 
 h4 {
@@ -300,13 +301,22 @@ h4 {
   font-weight: 800;
 }
 
+.tags {
+  margin-top: 4%;
+}
+
 .tag {
   display: inline-flex;
   align-items: center;
   border-radius: 1000px;
   background-color: #d8d8d8;
-  margin-left: 2%;
+  margin-right: 2%;
   padding: 2% 4%;
+}
+
+.tag img {
+  width: 16px;
+  aspect-ratio: 1;
 }
 
 .bg-seaside {

@@ -81,8 +81,8 @@ const Exercise = () => {
             setButton(
                 {
                     label: "Done",
-                    style: "btn-primay-disabled anchored-bottom",
-                    disabled: true
+                    style: "btn-primay-enabled-white anchored-bottom",
+                    disabled: false
                 }
             )        
         }

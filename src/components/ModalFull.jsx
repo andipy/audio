@@ -24,7 +24,7 @@ const ModalFull = (props) => {
         setCurrentModal(
             {
                 modal_id: 1,
-                modal_content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quam repellendus sit tempore rem nihil voluptate alias nam magnam fugiat et temporibus laborum reprehenderit, quidem voluptatum qui sunt neque in aperiam impedit officiis nulla ex delectus nostrum. Id, ratione. Ratione assumenda blanditiis quaerat ipsam quo enim id, quis iste iusto!",
+                modal_content: 'This listening exercise is for practicing guided mindfulness. Mindfulness practice has a number of benefits, but for starters, we know that it reduces stress and helps people feel more grounded. Sometimes our minds are leaping around from one thought to the next and we have trouble slowing them down and staying focused. Some kinds of mind wandering, like worry, can lead to suffering. Mindfulness is a remedy for that suffering. Mindfulness means paying attention, on purpose, to the present moment without judgement. In mindfulness practice, you bring focused awareness to the present moment and notice sensations, thoughts or feelings without clinging to them, resisting them, or trying to change them.',
                 modal_buttons: [
                     {
                         id: 1,
@@ -40,7 +40,7 @@ const ModalFull = (props) => {
         setCurrentModal(
             {
                 modal_id: 2,
-                modal_content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quam repellendus sit tempore rem nihil voluptate alias nam magnam fugiat et temporibus laborum reprehenderit, quidem voluptatum qui sunt neque in aperiam impedit officiis nulla ex delectus nostrum. Id, ratione. Ratione assumenda blanditiis quaerat ipsam quo enim id, quis iste iusto! Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quam repellendus sit tempore rem nihil voluptate alias nam magnam fugiat et temporibus laborum reprehenderit, quidem voluptatum qui sunt neque in aperiam impedit officiis nulla ex delectus nostrum. Id, ratione. Ratione assumenda blanditiis quaerat ipsam quo enim id, quis iste iusto!",
+                modal_content: 'Mindfulness practice can help you to: Be more aware of your mind and the ongoing process of thinking, gently noticing and observing all the brain chatter without any need to react to it. Cultivate calmness in the presence of unhelpful thoughts and challenging feelings. Feel less stress, worry, or rumination. Be less reactive and more flexible in your approach to life. Experience improvement in physical health and quality of life.',
                 modal_buttons: [
                     {
                         id: 1,
@@ -61,7 +61,7 @@ const ModalFull = (props) => {
     const [currentModal, setCurrentModal] = useState(
         {
             modal_id: 1,
-            modal_content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quam repellendus sit tempore rem nihil voluptate alias nam magnam fugiat et temporibus laborum reprehenderit, quidem voluptatum qui sunt neque in aperiam impedit officiis nulla ex delectus nostrum. Id, ratione. Ratione assumenda blanditiis quaerat ipsam quo enim id, quis iste iusto!",
+            modal_content: "This listening exercise is for practicing guided mindfulness. Mindfulness practice has a number of benefits, but for starters, we know that it reduces stress and helps people feel more grounded. Sometimes our minds are leaping around from one thought to the next and we have trouble slowing them down and staying focused. Some kinds of mind wandering, like worry, can lead to suffering. Mindfulness is a remedy for that suffering. Mindfulness means paying attention, on purpose, to the present moment without judgement. In mindfulness practice, you bring focused awareness to the present moment and notice sensations, thoughts or feelings without clinging to them, resisting them, or trying to change them.",
             modal_buttons: [
                 {
                     id: 1,
