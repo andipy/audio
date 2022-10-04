@@ -62,7 +62,8 @@ button:hover {
     z-index: 10;  
   }
   .fixed-bottom-double {
-    position: fixed;
+    position: absolute;
+    bottom: 0;
     width: 100%;
     left: calc((var(--frame-width) - var(--container))/2);
     bottom: var(--bottom-position-btn);
@@ -104,7 +105,7 @@ button:hover {
     align-items: center;
   }
   .fixed-bottom-double {
-    position: fixed;
+    position: absolute;
     width: var(--frame-width);
     left: 50%;
     transform: translateX(-50%);
@@ -180,7 +181,6 @@ button:hover {
 .nav-main {
   transition: all 400ms;
   position: fixed;
-  top: 0;
   width: inherit;
   z-index: 999;
   background-color: #FFFFFF;
